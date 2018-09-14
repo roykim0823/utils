@@ -22,12 +22,14 @@ class Counter(object):
         self.value = start
     def increment(self):
         logging.debug('Waiting for lock')
-        self.lock.acquire()
+#        self.lock.acquire()
+        self.lock.acquire(False)	# do not hold the current thread
         try:
             logging.debug('Acquired lock')
             self.value = self.value + 1
-        finally:
-            self.lock.release()
+        finally:	# it is always executed before leaving the try statement 
+        	self.lock.release()
+        	logging.debug('Released lock')
 
 def worker(c):
     for i in range(2):
