@@ -1,0 +1,21 @@
+set guifont=DejaVu\ Sans\ Mono\ 12
+colorscheme torte
+set background=dark
+
+filetype on
+syntax on
+
+set vb
+
+set cindent
+set title
+set ruler
+set nobackup
+set noswapfile
+set nowrap
+set autowrite
+set number
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set ignorecase
