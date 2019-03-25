@@ -1,0 +1,24 @@
+E. project
+1. perform memory debugging using valgrind, found memory related bugs
+2. perform GPU (CUDA) related code analysis, profiling, and performance analysis
+3. Design two-level test scheme which can easily manage the test results based on 
+   repo version and various test arugments
+
+HPF
+1. Add CUDA compatible interface 
+2. simplify building process via cmake
+3. add more unit tests
+4. found bugs in multithreading implementation and report
+5. design user-friendly CUDA template wrapper on HPF CUDA APIs
+
+HDF
+1. Found errors and fixed hardcoded error-prone build scripts
+2. deploy HDF and simplify building process using cmake
+3. add more user-friendly scripts
+
+BT
+1. found errors in build scripts and fixed hardcoded error-prone build scripts
+2. simplify 3rdparty build scripts
+3. perform MXNET distributed training and analyze the performance with different synchronization
+4. design a prototype "dependency engine" 
+5. propose a design and implementation TSA prototype 

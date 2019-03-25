@@ -3,3 +3,19 @@ Git
 ----
 git rebase -i HEAD~(n)
 git log --oneline --decorate --graph-all
+
+====
+Shell Commands
+----
+readelf
+	--file-headers
+	--setction-headers
+	--hex-dump=24
+	--program-headers
+
+objdump
+	--file-headers
+	--section-headers
+	-x
+	--disasseble
+-T, -t, -s
