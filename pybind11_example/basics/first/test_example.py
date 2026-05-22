@@ -16,3 +16,7 @@ array = np.array([1.0, 2.0, 3.0])
 # Call the C++ function
 scaled = example.scale_array(array, 2.0)
 print(scaled)  # Outputs: [2. 4. 6.]
+
+# Check the exprted variable
+print(example.the_answer)  # Outputs: 42
+print(example.what)

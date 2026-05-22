@@ -1,7 +1,7 @@
 #include <pybind11/pybind11.h>
 
-int add(int a, int b) {
-    return a + b;
+int add(int i, int j) {
+    return i + j;
 }
 
 int subtract(int a, int b) {
@@ -45,11 +45,18 @@ pybind11::array_t<double> scale_array(pybind11::array_t<double> input_array, dou
     return result; // Return the new NumPy array
 }
 
-PYBIND11_MODULE(example, m) {
+PYBIND11_MODULE(example, m, pybind11::mod_gil_not_used()) {
     m.doc() = "pybind11 example module"; // Optional module docstring
 
+    // Exporting variables
+    m.attr("the_answer") = 42;
+    pybind11::object world = pybind11::cast("world");
+    m.attr("what") = world;
+
     m.def("add", &add, "A function that adds two numbers",
-          pybind11::arg("a"), pybind11::arg("b"));
+          pybind11::arg("i"), pybind11::arg("j"));
+    //      "i"_a = 1, "j"_a = 2); // Using string literals for argument names (C++14 and later)
+    //    pybind11::arg("i") = 1, pybind11::arg("j") = 2); // Providing default values for arguments
 
     m.def("subtract", &subtract, "A function that subtracts two numbers",
           pybind11::arg("a"), pybind11::arg("b"));

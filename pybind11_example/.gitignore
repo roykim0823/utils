@@ -1,2 +1,17 @@
-*build
-*egg-info*
+# Compiled extension modules
+*.so
+*.pyd
+*.dylib
+
+# Python bytecode
+*.pyc
+__pycache__/
+
+# setuptools / pip build artifacts
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
