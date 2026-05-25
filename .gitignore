@@ -1,0 +1,68 @@
+#==============================================================================#
+# This file specifies intentionally untracked files that git should ignore.
+# See: http://www.kernel.org/pub/software/scm/git/docs/gitignore.html
+#==============================================================================#
+
+#==============================================================================#
+# File extensions to be ignored anywhere in the tree.
+#==============================================================================#
+# Temp files created by most text editors.
+*~
+# Merge files created by git.
+*.orig
+# Byte compiled python modules.
+*.pyc
+*.pyo
+# vim swap files
+.*.sw?
+.sw?
+# Emacs backup/lock files
+\#*\#
+.\#*
+#OS X specific files.
+.DS_Store
+
+#==============================================================================#
+# C/C++ build artifacts
+#==============================================================================#
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.d
+*.gch
+*.pch
+# gcc -S assembly output (used in comsys/)
+*.64s
+
+#==============================================================================#
+# Python
+#==============================================================================#
+__pycache__/
+*.egg-info/
+dist/
+.venv/
+venv/
+
+#==============================================================================#
+# Build / CMake output
+#==============================================================================#
+# Nested build directory
+build/
+# CMake generated files (in-source builds)
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+#==============================================================================#
+# Directories to ignore (do not add trailing '/'s, they skip symlinks).
+#==============================================================================#
+# VS2017 and VSCode config files.
+.vscode
+.vs
+# clangd index
+.clangd
